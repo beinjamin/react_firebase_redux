@@ -5,8 +5,8 @@ const ConnectModal = () => {
     return (
         <div className="connect-modal">
             <div className="header-btn">
-                <button>S'inscrire</button>
-                <button>Se Connecter</button>
+         <button>S'inscrire</button>
+        <button >Se Connecter</button>
             </div>
         </div>
     );
