@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ConnectModal = () => {
+    const [signUp,setSignUp] = useState(true);
     return (
-        <div>
-            <h1>CONNECT MODAL</h1>
+        <div className="connect-modal">
+            <div className="header-btn">
+                <button>S'inscrire</button>
+                <button>Se Connecter</button>
+            </div>
         </div>
     );
 };
