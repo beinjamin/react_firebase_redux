@@ -17,8 +17,8 @@ const registerPassword = userRef();
                 <h3>S'inscrire</h3>
                 <form>
                     <input type="text" placeholder="Pseudo" required/>
-                    <input type="email" placeholder="Email" required ref={registerEmail}/>
-                    <input type="password" placeholder="Mot de passe" require ref={registerPassword}/>
+                    <input type="email" placeholder="Email" required   ref={registerEmail}/>
+                    <input type="password" placeholder="Mot de passe" require   ref={registerPassword}/>
                     <input type="submit" placeholder="Valider Inscription" required/>
 
 
