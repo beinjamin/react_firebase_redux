@@ -9,7 +9,7 @@ const registerPassword = useRef();
 const handleRegister = (e)  => {
     e.preventDefault(); //pour que le formulaire se recharche
     try{
-    auth
+    auth.createUserWithEmailAndPassword ()// methode fiirebase 
     }catch (error){
         console.log(error.message);
 
@@ -18,13 +18,6 @@ const handleRegister = (e)  => {
     
 
 };
-
-
-
-
-
-
-
 
     return (
         <div className="signup-container">
