@@ -15,7 +15,7 @@ const registerPassword = userRef();
         <div className="signup-container">
             <div className="signup">
                 <h3>S'inscrire</h3>
-                <form>
+                <form onSubmit={e => handleRegister(e)}>
                     <input type="text" placeholder="Pseudo" required/>
                     <input type="email" placeholder="Email" required   ref={registerEmail}/>
                     <input type="password" placeholder="Mot de passe" require   ref={registerPassword}/>
