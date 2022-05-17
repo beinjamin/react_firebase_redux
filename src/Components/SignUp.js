@@ -6,7 +6,8 @@ const registerPassword = userRef();
 
 
 const handleRegister = (e)  => {
-    e.preventDefault();
+    e.preventDefault(); //pour que le formulaire se recharche
+    console.log(registerEmail.current.value, registerPassword.current.value);   //pour passer les elements a la base donnée
 }
 
 
