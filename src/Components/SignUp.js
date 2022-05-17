@@ -1,14 +1,23 @@
 import React from 'react';
+import {auth} from "../utils/firebase.config";
 
 const SignUp = () => {
-const registerEmail = userRef();
-const registerPassword = userRef();
+const registerEmail = useRef();
+const registerPassword = useRef();
 
 
 const handleRegister = (e)  => {
     e.preventDefault(); //pour que le formulaire se recharche
+    try{
+    auth
+    }catch (error){
+        console.log(error.message);
+
+    }
     console.log(registerEmail.current.value, registerPassword.current.value);   //pour passer les elements a la base donnée
-}
+    
+
+};
 
 
 
