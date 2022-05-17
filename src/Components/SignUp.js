@@ -5,6 +5,11 @@ const registerEmail = userRef();
 const registerPassword = userRef();
 
 
+const handleRegister = (e)  => {
+    e.preventDefault();
+}
+
+
 
 
 
