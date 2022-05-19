@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import {auth} from "../utils/firebase.config";
 
 const SignUp = () => {
 const registerEmail = useRef();
