@@ -14,7 +14,10 @@ const handleRegister = (e)  => {
         console.log(error.message);
 
     }
-    console.log(registerEmail.current.value, registerPassword.current.value);   //pour passer les elements a la base donnée
+    console.log(
+        registerEmail.current.value, 
+        registerPassword.current.value
+        );   //pour passer les elements a la base donnée
     
 
 };
