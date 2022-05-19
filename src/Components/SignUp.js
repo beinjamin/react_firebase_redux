@@ -1,9 +1,10 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {auth} from "../utils/firebase.config";
 
 const SignUp = () => {
-const registerEmail = useRef();
-const registerPassword = useRef();
+        const registerEmail = useRef();
+        const registerPassword = useRef();
+        const [displayName, setDisplayName] = useState ("");
 
 
 const handleRegister = (e)  => {
@@ -16,6 +17,9 @@ const handleRegister = (e)  => {
         registerPassword.current.value
     )
     .then(async(userAuth)=>{
+        await userAuth.user.updateProfile([
+            displayName
+        ])
 
     })
     
