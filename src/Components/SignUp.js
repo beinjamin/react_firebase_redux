@@ -9,15 +9,14 @@ const registerPassword = useRef();
 const handleRegister = (e)  => {
     e.preventDefault(); //pour que le formulaire se recharche
     try{
-    auth.createUserWithEmailAndPassword ()// methode fiirebase 
+    auth.createUserWithEmailAndPassword (
+        registerEmail.current.value,
+        registerPassword.current.value
+    )// methode fiirebase 
     }catch (error){
         console.log(error.message);
 
-    }
-    console.log(
-        registerEmail.current.value, 
-        registerPassword.current.value
-        );   //pour passer les elements a la base donnée
+    }  
     
 
 };
