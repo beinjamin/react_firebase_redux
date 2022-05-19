@@ -1,6 +1,7 @@
 import React from "react";
 import ConnectModal from "./Components/ConnectModal";
 import { onAuthStateChanged } from "firebase/auth";
+import CreatePost from "./Components/CreatePost";
 
 const App = () => {
   const [use, setUser] = useState(null);
@@ -12,7 +13,14 @@ const App = () => {
   return (
     <div>
       <div className="app-header">
-        <ConnectModal />
+        {user ?(
+          <CreatePost/>
+
+        ):(
+          <ConnectModal/>
+        )
+      }
+       
       </div>
 
       <div className="posts-container"></div>
