@@ -5,7 +5,9 @@ import { onAuthStateChanged } from "firebase/auth";
 const App = () => {
   const [use, setUser] = useState(null);
   //et methode vas surveille si on est connect ou pas
-  onAuthStateChanged();
+  onAuthStateChanged(auth,(currentUser)=>{
+    setUser(currentUser);
+  });
 
   return (
     <div>
