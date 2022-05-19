@@ -37,6 +37,7 @@ const handleRegister = (e)  => {
             <div className="signup">
                 <h3>S'inscrire</h3>
                 <form onSubmit={e => handleRegister(e)}>
+                    
                     <input type="text" placeholder="Pseudo" required onChange={(e)=>setDisplayName(e.target.value)}/>
                     <input type="email" placeholder="Email" required   ref={registerEmail}/>
                     <input type="password" placeholder="Mot de passe" require   ref={registerPassword}/>
