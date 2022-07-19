@@ -11,13 +11,17 @@ const SignUp = () => {
 
         try {
             auth
+                // methode firebase
                 .createUserWithEmailAndPassword(
-                    // methode firebase
                     registerEmail.current.value,
                     registerPassword.current.value
                 )
                 .then(async (userAuth) => {
-                    await userAuth.user.updateProfile([displayName]);
+                    await userAuth.user.updateProfile({
+                        displayName,
+                    });
+                    console.log(userAuth);
+                    window.location.reload();
                 });
         } catch (error) {
             console.log(error.message);

@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState } from "react";
 import ConnectModal from "./Components/ConnectModal";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import CreatePost from "./Components/CreatePost";
 import { auth } from "./utils/firebase.config";
+import CreatePost from "./Components/CreatePost";
+
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -21,7 +22,7 @@ const App = () => {
           <div className="user-infos">
             <span>{user?.displayName[0]}</span>
             <h4>[user?.displayName]</h4>
-            <button onClick={() => handleLogout}>
+            <button onClick={() => handleLogout()}>
               <i className="fa-solid fa-arrow-right-from-bracket"></i>
             </button>
           </div>
