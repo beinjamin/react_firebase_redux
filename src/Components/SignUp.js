@@ -12,7 +12,7 @@ const SignUp = () => {
         try {
             auth
                 .createUserWithEmailAndPassword(
-                    // methode fiirebase
+                    // methode firebase
                     registerEmail.current.value,
                     registerPassword.current.value
                 )
